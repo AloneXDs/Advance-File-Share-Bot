@@ -24,8 +24,8 @@ async def start(client, message):
     if message.chat.type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
         buttons = [
             [
-                InlineKeyboardButton("Updates", url="https://t.me/VJ_Bots"),
-                InlineKeyboardButton("🍿 YouTube Channel 🍿", url="https://youtube.com/@Tech_VJ")
+                InlineKeyboardButton("⌬ Bᴏᴛꜱ Uᴘᴅᴀᴛᴇꜱ ⌬", url=f"https://t.me/Arsenal_Bots_Updates"),
+                InlineKeyboardButton("✇ Oᴜʀ Nᴇᴛᴡᴏʀᴋ ✇", url=f"http://t.me/Team_XDs")
             ]
             ]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -41,12 +41,12 @@ async def start(client, message):
         await client.send_message(LOG_CHANNEL, script.LOG_TEXT_P.format(message.from_user.id, message.from_user.mention))
     if len(message.command) != 2:
         buttons = [[
-            InlineKeyboardButton('💝 Subscribe YouTube Channel 💗', url=f'http://youtube.com/@Tech_VJ')
+            InlineKeyboardButton('✇ Oᴜʀ Mᴀɪɴ Nᴇᴛᴡᴏʀᴋ ✇', url=f'http://t.me/Team_XDs')
             ],[
-            InlineKeyboardButton('♻️ Update Channel ♻️', url=f'https://t.me/VJ_Botz')
+            InlineKeyboardButton('⌬ Bᴏᴛꜱ Uᴘᴅᴀᴛᴇꜱ ⌬', url=f'https://t.me/Arsenal_Bots_Updates')
             ],[
-            InlineKeyboardButton('🥷 Dᴇᴠ/Cʀᴇᴀᴛᴏʀ', url=f't.me/Shadow_XD_ChatBot'),
-            InlineKeyboardButton('😊 About', callback_data='about')
+            InlineKeyboardButton('〄 Dᴇᴠ/Cʀᴇᴀᴛᴏʀ', url=f't.me/Shadow_XD_ChatBot'),
+            InlineKeyboardButton('✪ Aʙᴏᴜᴛ', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -63,12 +63,12 @@ async def start(client, message):
             return
 
         buttons = [[
-            InlineKeyboardButton('💝 Subscribe YouTube Channel 💗', url=f'http://youtube.com/@Tech_VJ')
+            InlineKeyboardButton('✇ Oᴜʀ Mᴀɪɴ Nᴇᴛᴡᴏʀᴋ ✇', url=f'http://t.me/Team_XDs')
             ],[
-            InlineKeyboardButton('♻️ Update Channel ♻️', url=f'https://t.me/VJ_Botz')
+            InlineKeyboardButton('⌬ Bᴏᴛꜱ Uᴘᴅᴀᴛᴇꜱ ⌬', url=f'https://t.me/Arsenal_Bots_Updates')
             ],[
-            InlineKeyboardButton('🥷 Dᴇᴠ/Cʀᴇᴀᴛᴏʀ', url=f't.me/Shadow_XD_ChatBot'),
-            InlineKeyboardButton('😊 About', callback_data='about')
+            InlineKeyboardButton('〄 Dᴇᴠ/Cʀᴇᴀᴛᴏʀ', url=f't.me/Shadow_XD_ChatBot'),
+            InlineKeyboardButton('✪ Aʙᴏᴜᴛ', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_photo(
@@ -131,7 +131,7 @@ async def start(client, message):
                     file_id=msg.get("file_id"),
                     caption=f_caption,
                     
-                    reply_markup=InlineKeyboardMarkup( [ [InlineKeyboardButton("🍿 YouTube Channel 🍿", url="https://youtube.com/@Tech_VJ")] ] ),
+                    reply_markup=InlineKeyboardMarkup( [ [InlineKeyboardButton("✇ Oᴜʀ Nᴇᴛᴡᴏʀᴋ ✇", url=f"http://t.me/Team_XDs")] ] ),
                     
                     protect_content=msg.get('protect', False),
                     )
@@ -228,7 +228,7 @@ async def start(client, message):
         file_id=file_id,
         caption=f_caption,
         
-        reply_markup=InlineKeyboardMarkup( [ [InlineKeyboardButton("🍿 YouTube Channel 🍿", url="https://youtube.com/@Tech_VJ")] ] ),
+        reply_markup=InlineKeyboardMarkup( [ [InlineKeyboardButton("✇ Oᴜʀ Nᴇᴛᴡᴏʀᴋ ✇", url=f"http://t.me/Team_XDs")] ] ),
         
         protect_content=True if pre == 'filep' else False,
         )
