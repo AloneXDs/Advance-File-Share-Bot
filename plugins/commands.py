@@ -45,7 +45,7 @@ async def start(client, message):
             ],[
             InlineKeyboardButton('♻️ Update Channel ♻️', url=f'https://t.me/VJ_Botz')
             ],[
-            InlineKeyboardButton('ℹ️ Owner', url=f't.me/vjbots_bot'),
+            InlineKeyboardButton('🥷 Dᴇᴠ/Cʀᴇᴀᴛᴏʀ', url=f't.me/Shadow_XD_ChatBot'),
             InlineKeyboardButton('😊 About', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
@@ -67,7 +67,7 @@ async def start(client, message):
             ],[
             InlineKeyboardButton('♻️ Update Channel ♻️', url=f'https://t.me/VJ_Botz')
             ],[
-            InlineKeyboardButton('ℹ️ Owner', url=f't.me/vjbots_bot'),
+            InlineKeyboardButton('🥷 Dᴇᴠ/Cʀᴇᴀᴛᴏʀ', url=f't.me/Shadow_XD_ChatBot'),
             InlineKeyboardButton('😊 About', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
