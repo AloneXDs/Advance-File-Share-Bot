@@ -97,12 +97,12 @@ async def next_page(bot, query):
     elif off_set is None:
         btn.insert(0,
             [
-                InlineKeyboardButton("Updates", url="https://t.me/VJ_Botz"),
+                InlineKeyboardButton("⌬ Bᴏᴛꜱ Uᴘᴅᴀᴛᴇꜱ ⌬", url=f"https://t.me/Arsenal_Bots_Updates"),
             ]
         )
         btn.insert(1,
             [
-                InlineKeyboardButton("🍿 YouTube Channel 🍿", url="https://youtube.com/@Tech_VJ"),
+                InlineKeyboardButton("✇ Oᴜʀ Nᴇᴛᴡᴏʀᴋ ✇", url=f"http://t.me/Team_XDs"),
             ]
         )
         btn.append(
@@ -166,20 +166,20 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     title = chat.title
                 except:
                     await query.message.edit_text("Make sure I'm present in your group!!", quote=True)
-                    return await query.answer('Piracy Is Crime')
+                    return await query.answer('Aʀꜱᴇɴᴀʟ Bᴏᴛᴢ ⚡')
             else:
                 await query.message.edit_text(
                     "I'm not connected to any groups!\nCheck /connections or connect to any groups",
                     quote=True
                 )
-                return await query.answer('Piracy Is Crime')
+                return await query.answer('Aʀꜱᴇɴᴀʟ Bᴏᴛᴢ ⚡')
 
         elif chat_type in [enums.ChatType.GROUP, enums.ChatType.SUPERGROUP]:
             grp_id = query.message.chat.id
             title = query.message.chat.title
 
         else:
-            return await query.answer('Piracy Is Crime')
+            return await query.answer('Aʀꜱᴇɴᴀʟ Bᴏᴛᴢ ⚡')
 
         st = await client.get_chat_member(grp_id, userid)
         if (st.status == enums.ChatMemberStatus.OWNER) or (str(userid) in ADMINS):
@@ -233,7 +233,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             reply_markup=keyboard,
             parse_mode=enums.ParseMode.MARKDOWN
         )
-        return await query.answer('Piracy Is Crime')
+        return await query.answer('Aʀꜱᴇɴᴀʟ Bᴏᴛᴢ ⚡')
     elif "connectcb" in query.data:
         await query.answer()
 
@@ -254,7 +254,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             )
         else:
             await query.message.edit_text('Some error occurred!!', parse_mode=enums.ParseMode.MARKDOWN)
-        return await query.answer('Piracy Is Crime')
+        return await query.answer('Aʀꜱᴇɴᴀʟ Bᴏᴛᴢ ⚡')
     elif "disconnect" in query.data:
         await query.answer()
 
@@ -277,7 +277,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f"Some error occurred!!",
                 parse_mode=enums.ParseMode.MARKDOWN
             )
-        return await query.answer('Piracy Is Crime')
+        return await query.answer('Aʀꜱᴇɴᴀʟ Bᴏᴛᴢ ⚡')
     elif "deletecb" in query.data:
         await query.answer()
 
@@ -295,7 +295,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 f"Some error occurred!!",
                 parse_mode=enums.ParseMode.MARKDOWN
             )
-        return await query.answer('Piracy Is Crime')
+        return await query.answer('Aʀꜱᴇɴᴀʟ Bᴏᴛᴢ ⚡')
     elif query.data == "backcb":
         await query.answer()
 
@@ -306,7 +306,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             await query.message.edit_text(
                 "There are no active connections!! Connect to some groups first.",
             )
-            return await query.answer('Piracy Is Crime')
+            return await query.answer('Aʀꜱᴇɴᴀʟ Bᴏᴛᴢ ⚡')
         buttons = []
         for groupid in groupids:
             try:
@@ -413,12 +413,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer()
     elif query.data == "start":
         buttons = [[
-            InlineKeyboardButton('💝 Subscribe YouTube Channel 💗', url=f'http://youtube.com/@Tech_VJ')
+            InlineKeyboardButton('✇ Oᴜʀ Mᴀɪɴ Nᴇᴛᴡᴏʀᴋ ✇', url=f'http://t.me/Team_XDs')
             ],[
-            InlineKeyboardButton('♻️ Update Channel ♻️', url=f'https://t.me/VJ_Botz')
+            InlineKeyboardButton('⌬ Bᴏᴛꜱ Uᴘᴅᴀᴛᴇꜱ ⌬', url=f'https://t.me/Arsenal_Bots_Updates')
             ],[
-            InlineKeyboardButton('ℹ️ Owner', url=f't.me/vjbots_bot'),
-            InlineKeyboardButton('😊 About', callback_data='about')
+            InlineKeyboardButton('〄 Dᴇᴠ/Cʀᴇᴀᴛᴏʀ', url=f't.me/Shadow_XD_ChatBot'),
+            InlineKeyboardButton('✪ Aʙᴏᴜᴛ', callback_data='about')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -429,14 +429,14 @@ async def cb_handler(client: Client, query: CallbackQuery):
         await query.answer('Piracy Is Crime')
     elif query.data == "help":
         buttons = [[
-            InlineKeyboardButton('Manual Filter', callback_data='manuelfilter'),
-            InlineKeyboardButton('Auto Filter', callback_data='autofilter')
+            InlineKeyboardButton('Mᴀɴᴜᴀʟ Fɪʟᴛᴇʀ', callback_data='manuelfilter'),
+            InlineKeyboardButton('Aᴜᴛᴏ Fɪʟᴛᴇʀ', callback_data='autofilter')
         ], [
-            InlineKeyboardButton('Connection', callback_data='coct'),
-            InlineKeyboardButton('Extra Mods', callback_data='extra')
+            InlineKeyboardButton('Cᴏɴɴᴇᴄᴛɪᴏɴꜱ', callback_data='coct'),
+            InlineKeyboardButton('Exᴛʀᴀ Mᴏᴅꜱ', callback_data='extra')
         ], [
-            InlineKeyboardButton('🏠 Home', callback_data='start'),
-            InlineKeyboardButton('🔮 Status', callback_data='stats')
+            InlineKeyboardButton('🏠 Hᴏᴍᴇ', callback_data='start'),
+            InlineKeyboardButton('🔮 Sᴛᴀᴛᴜꜱ', callback_data='stats')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -446,10 +446,10 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
     elif query.data == "about":
         buttons = [[
-            InlineKeyboardButton('♥️ Source', callback_data='source')
+            InlineKeyboardButton('Sᴏᴜʀᴄᴇ Cᴏᴅᴇ', callback_data='source')
         ], [
-            InlineKeyboardButton('🏠 Home', callback_data='start'),
-            InlineKeyboardButton('🔐 Close', callback_data='close_data')
+            InlineKeyboardButton('🏠 Hᴏᴍᴇ', callback_data='start'),
+            InlineKeyboardButton('🔐 Cʟᴏꜱᴇ', callback_data='close_data')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
@@ -670,12 +670,12 @@ async def auto_filter(client, msg, spoll=False):
 
     btn.insert(0,
         [
-            InlineKeyboardButton("Ott Update", url="https://t.me/Ott_UpdatezTG"),
+            InlineKeyboardButton("Bᴏᴛꜱ Uᴘᴅᴀᴛᴇꜱ", url="https://t.me/Arsenal_Bots_Updates"),
         ]
     )
     btn.insert(1,
         [
-            InlineKeyboardButton("Groups", url="https://t.me/Group_Linkzzzz"),
+            InlineKeyboardButton("Sᴜᴘᴘᴏʀᴛ Gʀᴏᴜᴘ", url="https://t.me/HelDesk_XDs"),
         ]
     )
 
